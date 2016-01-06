@@ -25,6 +25,8 @@ public class ActorActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        setTitle("Dummy Actor");
+
         invokeFAQpage();
     }
 
@@ -64,6 +66,7 @@ public class ActorActivity extends AppCompatActivity {
 
                 i.putExtra("url_textfield", url_textfield.getText().toString());
                 i.putExtra("title_textfield", title_textfield.getText().toString());
+
                 startActivity(i);
             }
         });

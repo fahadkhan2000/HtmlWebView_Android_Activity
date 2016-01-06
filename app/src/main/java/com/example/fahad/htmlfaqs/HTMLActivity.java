@@ -27,6 +27,7 @@ public class HTMLActivity extends AppCompatActivity {
         String title = intent.getStringExtra("title_textfield");
 
         browser = (WebView)findViewById(R.id.id_wv);
+        
         init_html_screen(url, title);
     }
 
