@@ -29,13 +29,13 @@ public class HTMLActivity extends AppCompatActivity {
 
     public void init_html_screen(String arg_url, String arg_title) {
 
-        this.setTitle(title);
+        this.setTitle(arg_title);
 
         browser.getSettings().setLoadsImagesAutomatically(true);
         browser.getSettings().setJavaScriptEnabled(true);
         browser.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         browser.setWebViewClient(new WebViewClient());
-        browser.loadUrl(url);
+        browser.loadUrl(arg_url);
     }
 
 }
