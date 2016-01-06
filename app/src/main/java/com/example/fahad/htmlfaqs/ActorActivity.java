@@ -10,10 +10,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class ActorActivity extends AppCompatActivity {
 
-    private static Button btn;
+    public static Button btn;
+    public static EditText url_textfield;
+    public static EditText title_textfield;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +53,17 @@ public class ActorActivity extends AppCompatActivity {
     public void invokeFAQpage() {
 
         btn = (Button) findViewById(R.id.id_faqbtn);
+        url_textfield = (   EditText) findViewById(R.id.id_url_textfield);
+        title_textfield = (EditText) findViewById(R.id.id_title_textfield);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent i = new Intent(ActorActivity.this, HTMLActivity.class);
+
+                i.putExtra("url_textfield", url_textfield.getText().toString());
+                i.putExtra("title_textfield", title_textfield.getText().toString());
                 startActivity(i);
             }
         });

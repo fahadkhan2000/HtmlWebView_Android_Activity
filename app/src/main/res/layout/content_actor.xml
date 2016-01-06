@@ -17,10 +17,36 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Frequently Asked Questions"
+        android:text="Load HTML"
         android:id="@+id/id_faqbtn"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:onClick="invokeFAQpage"
-        android:background="#b3f708" />
+        android:background="#b3f708"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="52dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_title_textfield"
+        android:background="#fa9004"
+        android:hint="Title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="37dp"
+        android:text="FAQs" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_url_textfield"
+        android:layout_marginTop="33dp"
+        android:background="#f88a03"
+        android:hint="URL"
+        android:layout_below="@+id/id_title_textfield"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="http://youtube.com" />
 </RelativeLayout>

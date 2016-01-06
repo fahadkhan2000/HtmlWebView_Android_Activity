@@ -1,5 +1,6 @@
 package com.example.fahad.htmlfaqs;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,8 +14,6 @@ public class HTMLActivity extends AppCompatActivity {
 
 
     private static WebView browser;
-    private static String url = "http://youtube.com";
-    private static String title = "FAQs";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +21,10 @@ public class HTMLActivity extends AppCompatActivity {
         setContentView(R.layout.activity_html);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Intent intent = getIntent();
+        String url = intent.getStringExtra("url_textfield");
+        String title = intent.getStringExtra("title_textfield");
 
         browser = (WebView)findViewById(R.id.id_wv);
         init_html_screen(url, title);
