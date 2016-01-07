@@ -23,11 +23,11 @@ public class HTMLActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
-        String url = intent.getStringExtra("url_textfield");
-        String title = intent.getStringExtra("title_textfield");
+        String url = intent.getStringExtra("url_input");
+        String title = intent.getStringExtra("title_input");
 
         browser = (WebView)findViewById(R.id.id_wv);
-        
+
         init_html_screen(url, title);
     }
 

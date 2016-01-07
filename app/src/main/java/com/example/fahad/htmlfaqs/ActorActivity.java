@@ -15,8 +15,8 @@ import android.widget.EditText;
 public class ActorActivity extends AppCompatActivity {
 
     public static Button btn;
-    public static EditText url_textfield;
-    public static EditText title_textfield;
+    public static EditText url_input;
+    public static EditText title_input;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +55,8 @@ public class ActorActivity extends AppCompatActivity {
     public void invokeFAQpage() {
 
         btn = (Button) findViewById(R.id.id_faqbtn);
-        url_textfield = (   EditText) findViewById(R.id.id_url_textfield);
-        title_textfield = (EditText) findViewById(R.id.id_title_textfield);
+        url_input = (   EditText) findViewById(R.id.id_url_textfield);
+        title_input = (EditText) findViewById(R.id.id_title_textfield);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,8 +64,8 @@ public class ActorActivity extends AppCompatActivity {
 
                 Intent i = new Intent(ActorActivity.this, HTMLActivity.class);
 
-                i.putExtra("url_textfield", url_textfield.getText().toString());
-                i.putExtra("title_textfield", title_textfield.getText().toString());
+                i.putExtra("url_input", url_input.getText().toString());
+                i.putExtra("title_input", title_input.getText().toString());
 
                 startActivity(i);
             }
