@@ -25,10 +25,10 @@ public class URLViewerActivity extends AppCompatActivity {
         String title = intent.getStringExtra("url_title_input");
 
 
-        init_html_screen(url, title);
+        init_url_page(url, title);
     }
 
-    public void init_html_screen(String arg_url, String arg_title) {
+    public void init_url_page(String arg_url, String arg_title) {
 
         this.setTitle(arg_title);
 
