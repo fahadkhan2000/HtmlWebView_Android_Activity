@@ -12,7 +12,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_actor"
     tools:context="com.example.fahad.htmlfaqs.ActorActivity"
-    android:background="#020202">
+    android:background="#ffffff">
 
     <Button
         android:layout_width="match_parent"
