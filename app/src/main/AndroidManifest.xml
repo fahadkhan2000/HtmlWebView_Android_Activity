@@ -21,11 +21,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HTMLActivity"
+            android:name=".URLViewerActivity"
             android:label="@string/title_activity_html"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <intent-filter>
+            <action android:name="com.example.fahad.htmlfaqs.URLViewerActivity" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+
+        <activity
+            android:name=".HTMLViewerActivity"
+            android:label="@string/title_activity_third"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <intent-filter>
-            <action android:name="com.example.fahad.htmlfaqs.HTMLActivity" />
+            <action android:name="com.example.fahad.htmlfaqs.HTMLViewerActivity" />
 
             <category android:name="android.intent.category.DEFAULT" />
         </intent-filter>

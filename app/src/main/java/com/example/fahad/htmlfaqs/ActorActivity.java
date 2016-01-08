@@ -2,8 +2,6 @@ package com.example.fahad.htmlfaqs;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -14,9 +12,12 @@ import android.widget.EditText;
 
 public class ActorActivity extends AppCompatActivity {
 
-    public static Button btn;
+    public static Button invoke_URL_btn;
+    public static Button invoke_HTML_btn;
     public static EditText url_input;
-    public static EditText title_input;
+    public static EditText url_title_input;
+    public static EditText html_input;
+    public static EditText html_title_input;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +26,11 @@ public class ActorActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        setTitle("Dummy Actor");
+        setTitle("Actor Screen");
 
-        invokeFAQpage();
+        invokeURLpage();
+
+        invokeHTMLpage();
     }
 
     @Override
@@ -52,22 +55,43 @@ public class ActorActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void invokeFAQpage() {
+    public void invokeURLpage() {
 
-        btn = (Button) findViewById(R.id.id_faqbtn);
+        invoke_URL_btn = (Button) findViewById(R.id.id_faqbtn);
         url_input = (   EditText) findViewById(R.id.id_url_textfield);
-        title_input = (EditText) findViewById(R.id.id_title_textfield);
+        url_title_input = (EditText) findViewById(R.id.id_title_textfield);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        invoke_URL_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(ActorActivity.this, HTMLActivity.class);
+                Intent i = new Intent(ActorActivity.this, URLViewerActivity.class);
 
                 i.putExtra("url_input", url_input.getText().toString());
-                i.putExtra("title_input", title_input.getText().toString());
+                i.putExtra("url_title_input", url_title_input.getText().toString());
 
                 startActivity(i);
+            }
+        });
+    }
+
+    public void invokeHTMLpage() {
+
+
+        invoke_HTML_btn = (Button) findViewById(R.id.id_btn_to_3rd_screen);
+        html_title_input = (EditText) findViewById(R.id.id_title_html_page);
+        html_input = (EditText) findViewById(R.id.id_html_filepath);
+
+        invoke_HTML_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i2 = new Intent(ActorActivity.this, HTMLViewerActivity.class);
+
+                i2.putExtra("html_input", html_input.getText().toString());
+                i2.putExtra("html_title_input", html_title_input.getText().toString());
+
+                startActivity(i2);
             }
         });
     }
