@@ -32,23 +32,21 @@
         android:id="@+id/id_title_textfield"
         android:background="#fa9004"
         android:hint="Title"
+        android:text="Title FAQ Page"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="37dp"
-        android:text="Title FAQ Page" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/id_url_textfield"
-        android:layout_marginTop="33dp"
         android:background="#f88a03"
         android:hint="URL"
+        android:text="http://google.com"
         android:layout_below="@+id/id_title_textfield"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:text="http://google.com" />
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="fill_parent"
@@ -56,31 +54,30 @@
         android:text="Load HTML"
         android:id="@+id/id_btn_to_3rd_screen"
         android:background="#f70303"
+        android:onClick=" invokeHTMLpage"
         android:layout_above="@+id/id_faqbtn"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="28dp"
-        android:onClick=" invokeHTMLpage" />
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/id_title_html_page"
-        android:layout_marginTop="78dp"
-        android:text="Title HTML Page"
-        android:background="#118f6d"
-        android:layout_below="@+id/id_url_textfield"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/id_title_html_page"
+        android:layout_marginTop="35dp"
+        android:text="Title HTML Page"
+        android:background="#118f6d"
+        android:layout_below="@+id/id_url_textfield"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/id_html_filepath"
         android:background="#118f6d"
-        android:layout_centerVertical="true"
+        android:text="file:///android_asset/html_page_1.html"
+        android:layout_below="@+id/id_title_html_page"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:text="file:///android_asset/html_page_1.html" />
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

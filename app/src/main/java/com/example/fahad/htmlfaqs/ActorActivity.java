@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 public class ActorActivity extends AppCompatActivity {
 
     public static Button invoke_URL_btn;
@@ -58,7 +59,7 @@ public class ActorActivity extends AppCompatActivity {
     public void invokeURLpage() {
 
         invoke_URL_btn = (Button) findViewById(R.id.id_faqbtn);
-        url_input = (   EditText) findViewById(R.id.id_url_textfield);
+        url_input = (EditText) findViewById(R.id.id_url_textfield);
         url_title_input = (EditText) findViewById(R.id.id_title_textfield);
 
         invoke_URL_btn.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +78,6 @@ public class ActorActivity extends AppCompatActivity {
 
     public void invokeHTMLpage() {
 
-
         invoke_HTML_btn = (Button) findViewById(R.id.id_btn_to_3rd_screen);
         html_title_input = (EditText) findViewById(R.id.id_title_html_page);
         html_input = (EditText) findViewById(R.id.id_html_filepath);
@@ -88,6 +88,7 @@ public class ActorActivity extends AppCompatActivity {
 
                 Intent i2 = new Intent(ActorActivity.this, HTMLViewerActivity.class);
 
+
                 i2.putExtra("html_input", html_input.getText().toString());
                 i2.putExtra("html_title_input", html_title_input.getText().toString());
 
@@ -96,3 +97,6 @@ public class ActorActivity extends AppCompatActivity {
         });
     }
 }
+
+
+

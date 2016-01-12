@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -30,7 +31,7 @@ public class HTMLViewerActivity extends AppCompatActivity {
 
     public void init_html_page(String arg_html, String arg_title) {
 
-        setTitle(arg_title);
+        //setTitle(arg_title);
 
         html_webview = (WebView) findViewById(R.id.id_webview_2);
         html_webview.getSettings().setLoadsImagesAutomatically(true);
