@@ -31,7 +31,7 @@ public class HTMLViewerActivity extends AppCompatActivity {
 
     public void init_html_page(String arg_html, String arg_title) {
 
-        //setTitle(arg_title);
+        setTitle(arg_title);
 
         html_webview = (WebView) findViewById(R.id.id_webview_2);
         html_webview.getSettings().setLoadsImagesAutomatically(true);
